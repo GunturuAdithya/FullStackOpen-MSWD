@@ -1,0 +1,4 @@
+title exercise 0.6 / new_note spa
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+server-->browser: {"message":"note created"}

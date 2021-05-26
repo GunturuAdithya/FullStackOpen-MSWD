@@ -1,0 +1,23 @@
+title new_note
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/new_note
+server-->browser: http status code 200
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server-->browser: 'main.css' will be displayed
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+server-->browser: 'main.js' will be displayed
+
+note over browser:
+browser starts executing js-code
+that requests JSON data from server 
+end note
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server-->browser: [{"content":"peaceeeee","date":"2021-05-25T03:33:59.192Z"}]
+
+note over browser:
+browser executes the event handler
+that renders notes to display
+end note

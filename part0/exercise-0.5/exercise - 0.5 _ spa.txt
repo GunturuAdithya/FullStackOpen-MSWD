@@ -1,0 +1,23 @@
+title exercise - 0.5 / spa
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+server-->browser: HTML-code will be displayed
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa/main.css
+server-->browser: main.css code will be displayed
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa/main.js
+server-->browser: main.js code will be displayed
+
+note over browser:
+browser starts executing js-code
+that requests JSON data from server 
+end note
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa/data.json
+server-->browser: [{"content":"sample","date":"2021-05-24T20:49:38.360Z"},..]
+
+note over browser:
+browser executes the event handler
+that renders notes to display
+end note

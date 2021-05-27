@@ -1,7 +1,10 @@
 title new_note
 
-browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/new_note
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
 server-->browser: http status code 200
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+server-->browser: HTML-code will be displayed
 
 browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
 server-->browser: 'main.css' will be displayed
